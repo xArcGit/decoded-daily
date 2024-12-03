@@ -24,11 +24,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo 'PATH=$HOME/.bun/bin:$PATH' >> $GITHUB_ENV
-          source $GITHUB_ENV
+          export PATH=$HOME/.bun/bin:$PATH
           bun install
 
       - name: Run tests
         run: |
-          source $GITHUB_ENV
+          export PATH=$HOME/.bun/bin:$PATH
           bun test
