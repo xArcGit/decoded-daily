@@ -13,16 +13,6 @@ If you discover a security vulnerability within this project, please follow thes
 
 We take all security reports seriously and will respond promptly to your report. Thank you for helping to keep our project secure.
 
-## Supported Versions
-
-We currently support the following versions with security updates:
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
-| 0.9.x   | :white_check_mark: |
-| < 0.9   | :white_check_mark: |
-
 ## Security Updates
 
 We will release security updates as needed. Please ensure you are using the latest version to benefit from the latest security patches.
