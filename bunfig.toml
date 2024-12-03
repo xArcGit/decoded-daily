@@ -1,0 +1,8 @@
+[test]
+root = "tests"
+
+[install]
+auto = "auto"
+
+[run]
+shell = "bun"
