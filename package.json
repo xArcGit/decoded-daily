@@ -2,10 +2,10 @@
 	"name": "decoded-daily",
 	"version": "0.0.1",
 	"license": "XAG-1 Private Software License",
-	"type": "module",
 	"author": {
 		"name": "xArcGit"
 	},
+	"contributes": {},
 	"scripts": {
 		"lint": "lint-staged"
 	},
