@@ -22,11 +22,13 @@ jobs:
         run: |
           curl -fsSL https://bun.sh/install | bash
 
-      - name: Source Bun environment
-        run: echo 'PATH=$HOME/.bun/bin:$PATH' >> $GITHUB_ENV
-
       - name: Install dependencies
-        run: bun install
+        run: |
+          echo 'PATH=$HOME/.bun/bin:$PATH' >> $GITHUB_ENV
+          source $GITHUB_ENV
+          bun install
 
       - name: Run tests
-        run: bun test
+        run: |
+          source $GITHUB_ENV
+          bun test
