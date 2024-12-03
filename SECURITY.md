@@ -21,7 +21,7 @@ We currently support the following versions with security updates:
 | ------- | ------------------ |
 | 1.0.x   | :white_check_mark: |
 | 0.9.x   | :white_check_mark: |
-| < 0.9   | :x:                |
+| < 0.9   | :white_check_mark: |
 
 ## Security Updates
 
