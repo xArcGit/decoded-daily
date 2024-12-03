@@ -46,6 +46,15 @@ If you find a bug or have a feature request, please create an issue in the [issu
 - Follow the existing code style.
 - Write clear and concise commit messages.
 - Include comments where necessary.
+- Avoid making too many commits; try to group related changes together.
+- Ensure your code passes all tests before committing.
+- Use meaningful variable and function names.
+- Keep your code DRY (Don't Repeat Yourself).
+- Adhere to the project's linting rules and formatting guidelines.
+- Write unit tests for new features and bug fixes.
+- Document any new functionality or changes in the relevant documentation files.
+
+By following these guidelines, you help maintain the quality and consistency of the codebase.
 
 ## License
 
