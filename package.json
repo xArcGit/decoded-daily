@@ -1,0 +1,20 @@
+{
+	"name": "decoded-daily",
+	"version": "0.0.1",
+	"license": "XAG-1 Private Software License",
+	"type": "module",
+	"author": {
+		"name": "xArcGit"
+	},
+	"scripts": {
+		"lint": "lint-staged"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"lint-staged": "^15.2.10"
+	},
+	"lint-staged": {
+		"*.{ts,js}": "bunx biome check --apply-unsafe",
+		"**/*": "bunx biome format --write --files-ignore-unknown=true"
+	}
+}
