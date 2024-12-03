@@ -8,7 +8,8 @@
 	"contributes": {},
 	"scripts": {
 		"lint": "bunx biome check --apply-unsafe",
-		"format": "bunx biome format --write --files-ignore-unknown=true"
+		"format": "bunx biome format --write --files-ignore-unknown=true",
+		"test": ""
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",

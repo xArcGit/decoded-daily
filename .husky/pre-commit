@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 
-bun run lint
-bun run format
+bun lint
+bun format
+bun test
