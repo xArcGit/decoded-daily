@@ -14,7 +14,15 @@
 		"formatWithErrors": false,
 		"indentStyle": "tab",
 		"indentWidth": 2,
-		"ignore": ["build/*", "*.db", "*.md", "*.lockb", "node_modules"]
+		"ignore": [
+			"build/*",
+			"*.db",
+			"*.md",
+			"*.lockb",
+			"node_modules/*",
+			".husky/*",
+			".github/*"
+		]
 	},
 	"javascript": {
 		"formatter": {
