@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  },
+  "include": ["server/**/*.ts", "tsconfig.json"],
+  "exclude": ["node_modules", "build"]
+}

@@ -6,12 +6,27 @@
 		"name": "xArcGit"
 	},
 	"contributes": {},
+	"type": "module",
 	"scripts": {
 		"lint": "bunx biome check --apply-unsafe",
 		"format": "bunx biome format --write --files-ignore-unknown=true",
-		"test": ""
+		"server:dev": "bun run --hot server/index.ts --config tsconfig.server.json",
+		"server:build": "bun build server/index.ts --config tsconfig.server.json",
+		"server:start": "bun start server/index.ts --config tsconfig.server.json",
+		"client:dev": "bunx --bun astro dev --config tsconfig.client.json",
+		"client:build": "bunx --bun astro build --output build --config tsconfig.client.json",
+		"client:preview": "bunx --bun astro preview --config tsconfig.client.json",
+		"client:astro": "bunx --bun astro --config tsconfig.client.json"
+	},
+	"dependencies": {
+		"astro": "^5.0.1",
+		"hono": "^4.6.12",
+		"pino": "^9.5.0",
+		"pino-pretty": "^13.0.0",
+		"zod": "^3.23.8"
 	},
 	"devDependencies": {
+		"@types/bun": "latest",
 		"@biomejs/biome": "^1.9.4",
 		"biome": "^0.3.3",
 		"husky": "^9.1.7"
