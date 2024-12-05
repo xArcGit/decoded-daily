@@ -1,15 +1,12 @@
 import { env } from './env';
 
 export const config = {
-	runner: {
-		env: env.ENV,
-		port: {
-			server: env.SERVER_PORT,
-			client: env.CLIENT_PORT,
-		},
+	client: {
+		port: env.CLIENT_PORT,
 	},
-	database: {
-		name: env.DATABASE_NAME,
+	server: {
+		port: env.SERVER_PORT,
+		env: env.ENV,
 	},
 	log: {
 		level: env.LOG_LEVEL,
