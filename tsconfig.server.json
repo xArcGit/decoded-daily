@@ -1,9 +1,9 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
-  },
-  "include": ["server/**/*.ts"]
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"strict": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx"
+	},
+	"include": ["server/**/*.ts"]
 }

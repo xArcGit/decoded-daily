@@ -1,13 +1,13 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@client/*": ["./src/*"],
-      "@server/*": ["./server/*"],
-      "@type/*": ["./shared/types*"],
-      "@util/*": ["./shared/utils/*"],
-      "@config/*": ["./shared/config/*"]
-    }
-  },
-  "exclude": ["build", "node_modules"]
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@client/*": ["./src/*"],
+			"@server/*": ["./server/*"],
+			"@type/*": ["./shared/types*"],
+			"@util/*": ["./shared/utils/*"],
+			"@config/*": ["./shared/config/*"]
+		}
+	},
+	"exclude": ["build", "node_modules"]
 }
