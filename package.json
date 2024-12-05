@@ -10,13 +10,15 @@
 	"scripts": {
 		"lint": "bunx biome check --apply-unsafe",
 		"format": "bunx biome format --write --files-ignore-unknown=true",
-		"server:dev": "bun run --hot server/index.ts --config tsconfig.server.json",
-		"server:build": "bun build server/index.ts --config tsconfig.server.json",
-		"server:start": "bun start server/index.ts --config tsconfig.server.json",
-		"client:dev": "bunx --bun astro dev --config tsconfig.client.json",
-		"client:build": "bunx --bun astro build --output build --config tsconfig.client.json",
-		"client:preview": "bunx --bun astro preview --config tsconfig.client.json",
-		"client:astro": "bunx --bun astro --config tsconfig.client.json"
+		"dev": "bun run dev:client & bun run dev:server",
+		"build": "bun run build:server & bun run build:client",
+		"dev:server": "bun run --hot server/index.ts --config tsconfig.server.json",
+		"build:server": "bun build server/index.ts --config tsconfig.server.json",
+		"start:server": "bun start server/index.ts --config tsconfig.server.json",
+		"dev:client": "bunx --bun astro dev --config tsconfig.client.json",
+		"build:client": "bunx --bun astro build --output build --config tsconfig.client.json",
+		"preview:client": "bunx --bun astro preview --config tsconfig.client.json",
+		"astro:client": "bunx --bun astro --config tsconfig.client.json"
 	},
 	"dependencies": {
 		"astro": "^5.0.1",
