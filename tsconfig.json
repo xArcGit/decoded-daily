@@ -1,11 +1,11 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@client/*": ["./src/*"],
-      "@server/*": ["./server/*"],
-      "@types/*": ["./shared/types*"],
-      "@utils/*": ["./shared/utils/*"],
-      "@config/*": ["./shared/config/*"]
-    }
-  }
+	"compilerOptions": {
+		"paths": {
+			"@client/*": ["./src/*"],
+			"@server/*": ["./server/*"],
+			"@types/*": ["./shared/types*"],
+			"@utils/*": ["./shared/utils/*"],
+			"@config/*": ["./shared/config/*"]
+		}
+	}
 }
