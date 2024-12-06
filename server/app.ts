@@ -5,11 +5,17 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 import { errorHandler } from './middlewares/error-handler';
+import { restriction } from './middlewares/ip-restriction';
+import { rateLimit } from './middlewares/rate-limit';
+import { secureHeader } from './middlewares/secure-headers';
 import { route } from './routes';
 import ApiError from './utils/api-error';
 
 const app = new Hono();
 app.use('*', sentry());
+app.use('*', restriction());
+app.use('*', rateLimit());
+app.use('*', secureHeader());
 app.use('*', cors());
 
 app.use(

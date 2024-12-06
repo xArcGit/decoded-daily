@@ -22,8 +22,11 @@
 	},
 	"dependencies": {
 		"@hono/sentry": "^1.2.0",
+		"@hono/zod-validator": "^0.4.1",
+		"add": "^2.0.6",
 		"astro": "^5.0.1",
 		"hono": "^4.6.12",
+		"hono-rate-limiter": "^0.4.2",
 		"pino": "^9.5.0",
 		"pino-pretty": "^13.0.0",
 		"zod": "^3.23.8",

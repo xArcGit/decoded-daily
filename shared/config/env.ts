@@ -10,13 +10,25 @@ enum LogLevel {
 }
 
 const envSchema = z.object({
-	ENV: z.enum(['production', 'development']).default('production'),
-	SERVER_PORT: z.preprocess(val => Number(val), z.number().default(3001)),
-	CLIENT_PORT: z.preprocess(val => Number(val), z.number().default(3000)),
-	LOG_LEVEL: z.nativeEnum(LogLevel).default(LogLevel.INFO),
+	ENV: z.enum(['production', 'development']),
+	SERVER_PORT: z.preprocess(val => Number(val), z.number()),
+	CLIENT_PORT: z.preprocess(val => Number(val), z.number()),
+	LOG_LEVEL: z.nativeEnum(LogLevel),
 	LOG_USE_COLOR: z.preprocess(
 		val => val === 'true' || val === true,
-		z.boolean().default(true),
+		z.boolean(),
+	),
+	IP_RESTRICTION_DENY_LIST: z.preprocess(
+		val => (typeof val === 'string' ? val.split(',') : val),
+		z.array(z.string().nullable()),
+	),
+	IP_RESTRICTION_ALLOW_LIST: z.preprocess(
+		val => (typeof val === 'string' ? val.split(',') : val),
+		z.array(z.string().nullable()),
+	),
+	LOGGING_ENABLED: z.preprocess(
+		val => val === 'true' || val === true,
+		z.boolean(),
 	),
 });
 
