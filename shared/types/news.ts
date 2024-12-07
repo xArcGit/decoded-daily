@@ -23,10 +23,11 @@ export const news = z.object({
 });
 
 // Define the `newsDeltas` schema by extending `news`
-export const newsDeltas = news.extend({
+export const newsDeltas = z.object({
+	id: z.string(),
 	news_id: z.string(),
+	delta: z.string(),
 	version: z.number(),
-	delta_tag: z.string(),
 });
 
 export type News = z.infer<typeof news>;
