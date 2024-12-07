@@ -34,17 +34,26 @@ export const news = pgTable('news', {
 	updatedAt: timestamp('updated_at').notNull(),
 });
 
-// News Tags Table (Many-to-Many Relationship between News and Tags)
+// Tags Table
+export const tags = pgTable('tag', {
+	id: varchar('id', { length: 255 }).primaryKey(),
+	name: varchar('name', { length: 255 }).unique().notNull(),
+	createdAt: timestamp('created_at').defaultNow().notNull(),
+});
+
+// News Tags Table (Join Table for Many-to-Many Relationship)
 export const newsTags = pgTable(
-	'news_tags',
+	'news_tag',
 	{
 		newsId: varchar('news_id', { length: 255 })
 			.references(() => news.id)
 			.notNull(),
-		tag: varchar('tag', { length: 255 }).notNull(),
+		tagId: varchar('tag_id', { length: 255 })
+			.references(() => tags.id)
+			.notNull(),
 	},
 	table => ({
-		pk: primaryKey(table.newsId, table.tag),
+		pk: primaryKey(table.newsId, table.tagId),
 	}),
 );
 
