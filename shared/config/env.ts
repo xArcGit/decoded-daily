@@ -30,6 +30,7 @@ const envSchema = z.object({
 		val => val === 'true' || val === true,
 		z.boolean(),
 	),
+	DB_URI: z.string(),
 });
 
 export const env = envSchema.parse(Bun.env);

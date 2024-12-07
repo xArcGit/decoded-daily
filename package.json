@@ -18,13 +18,23 @@
 		"dev:client": "bunx --bun astro dev --config tsconfig.client.json",
 		"build:client": "bunx --bun astro build --output build --config tsconfig.client.json",
 		"preview:client": "bunx --bun astro preview --config tsconfig.client.json",
-		"astro:client": "bunx --bun astro --config tsconfig.client.json"
+		"astro:client": "bunx --bun astro --config tsconfig.client.json",
+		"db:generate": "bun drizzle-kit generate",
+		"db:migrate": "bun drizzle-kit migrate",
+		"db:push": "bun drizzle-kit push",
+		"db:pull": "bun drizzle-kit pull",
+		"db:check": "bun drizzle-kit check",
+		"db:up": "bun drizzle-kit up",
+		"db:studio": "bun drizzle-kit studio"
 	},
 	"dependencies": {
 		"@hono/sentry": "^1.2.0",
 		"@hono/zod-validator": "^0.4.1",
+		"@neondatabase/serverless": "^0.10.4",
 		"add": "^2.0.6",
 		"astro": "^5.0.1",
+		"drizzle-orm": "^0.37.0",
+		"drizzle-zod": "^0.5.1",
 		"hono": "^4.6.12",
 		"hono-rate-limiter": "^0.4.2",
 		"pino": "^9.5.0",
@@ -33,9 +43,10 @@
 		"zod-validation-error": "^3.4.0"
 	},
 	"devDependencies": {
-		"@types/bun": "latest",
 		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest",
 		"biome": "^0.3.3",
+		"drizzle-kit": "^0.29.1",
 		"husky": "^9.1.7"
 	}
 }

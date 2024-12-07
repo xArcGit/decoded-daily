@@ -21,4 +21,7 @@ export const config = {
 	logging: {
 		enabled: env.LOGGING_ENABLED,
 	},
+	db: {
+		url: env.DB_URI,
+	},
 };
