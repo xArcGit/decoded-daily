@@ -8,22 +8,22 @@ import { errorHandler } from './middlewares/error-handler';
 import { restriction } from './middlewares/ip-restriction';
 import { rateLimit } from './middlewares/rate-limit';
 import { secureHeader } from './middlewares/secure-headers';
-import { route } from './routes';
+import { routes } from './routes';
 import ApiError from './utils/api-error';
 
 const app = new Hono();
+
 app.use('*', sentry());
 app.use('*', restriction());
 app.use('*', rateLimit());
 app.use('*', secureHeader());
 app.use('*', cors());
-
 app.use(
 	'*',
 	logger((message, ...rest) => customLogger.info(message, ...rest)),
 );
 
-app.route('/', route);
+const apiRoute = app.route('/', routes);
 
 app.notFound(() => {
 	throw new ApiError(
@@ -35,4 +35,4 @@ app.notFound(() => {
 app.onError(errorHandler);
 
 export default app;
-export type AppType = typeof app;
+export type AppType = typeof apiRoute;

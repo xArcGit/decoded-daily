@@ -1,3 +1,3 @@
 export * from './news.model';
 export * from './user.model';
-export * from './sponser.model';
+export * from './sponsor.model';

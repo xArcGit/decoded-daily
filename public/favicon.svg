@@ -1,9 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-labelledby="icon-title" role="img">
+  <!-- Main Paths -->
+  <path 
+    d="M625.6 516.8l19.2 81.6 104-38.4 4.8 14.4-110.4 40L560 824l-14.4-6.4 83.2-203.2-169.6-25.6 64 217.6c3.2 8-1.6 17.6-11.2 19.2s-17.6-1.6-19.2-11.2l-68.8-232-153.6-22.4 1.6-16 145.6 22.4-28.8-96-116.8 59.2-14.4-28.8 129.6-65.6L480 217.6 254.4 499.2l-12.8-9.6L480 190.4l9.6 6.4 27.2 11.2-96 227.2 177.6 41.6-64-268.8 16-3.2 67.2 278.4 136 32c8 1.6 14.4 11.2 11.2 19.2-1.6 8-11.2 14.4-19.2 11.2l-120-28.8zM608 512l-185.6-43.2 30.4 102.4 176 25.6L608 512z m-46.4-313.6l12.8-9.6L784 484.8l-12.8 9.6-209.6-296zM768 588.8l12.8 9.6-201.6 240-12.8-9.6 201.6-240z m-278.4 240l-11.2 11.2-232-243.2 11.2-11.2 232 243.2z"
+    class="main-path" />
+  
+  <!-- Circles -->
+  <circle cx="400" cy="448" r="64" class="circle-main" />
+  <circle cx="640" cy="608" r="56" class="circle-secondary" />
+  <circle cx="208" cy="624" r="48" class="circle-secondary" />
+  <circle cx="528" cy="960" r="48" class="circle-secondary" />
+  <circle cx="528" cy="224" r="48" class="circle-secondary" />
+  <circle cx="816" cy="624" r="48" class="circle-secondary" />
+  
+  <!-- Styles -->
+  <style>
+    .main-path {
+      fill: #050D42;
+      stroke: #2F4BFF;
+      stroke-width: 1.5;
+      transition: fill 0.3s ease-in-out;
+    }
+    .circle-main {
+      fill: #2F4BFF;
+      stroke: #050D42;
+      stroke-width: 2;
+    }
+    .circle-secondary {
+      fill: #2F4BFF;
+      opacity: 0.8;
+      transition: opacity 0.3s ease-in-out;
+    }
+    svg:hover .main-path {
+      fill: #FF5722;
+    }
+    svg:hover .circle-secondary {
+      opacity: 1;
+    }
+  </style>
 </svg>
