@@ -21,6 +21,7 @@
 			"build/*",
 			"*.db",
 			"*.md",
+			"*.toml",
 			"*.lockb",
 			"node_modules/*",
 			".husky/*",
