@@ -14,10 +14,10 @@ import ApiError from './utils/api-error';
 const app = new Hono();
 
 app.use('*', sentry());
-app.use('*', restriction());
-app.use('*', rateLimit());
-app.use('*', secureHeader());
-app.use('*', cors());
+// app.use('*', restriction()); // TODO: Fix error and improve
+app.use('*', rateLimit()); // TODO: Fix error and improve
+app.use('*', secureHeader()); // TODO: Fix error and improve
+app.use('*', cors()); // TODO: Fix error and improve
 app.use(
 	'*',
 	logger((message, ...rest) => customLogger.info(message, ...rest)),
