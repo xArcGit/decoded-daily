@@ -19,13 +19,13 @@
 		"server:dev": "bun run --hot server/index.ts --config tsconfig.server.json",
 		"server:build": "bun build server/index.ts --config tsconfig.server.json",
 		"server:start": "bun start server/index.ts --config tsconfig.server.json",
-		"db:generate": "bun drizzle-kit generate",
-		"db:migrate": "bun drizzle-kit migrate",
-		"db:push": "bun drizzle-kit push",
-		"db:pull": "bun drizzle-kit pull",
-		"db:check": "bun drizzle-kit check",
-		"db:update": "bun drizzle-kit up",
-		"db:studio": "bun drizzle-kit studio"
+		"db:generate": "bunx --bun drizzle-kit generate",
+		"db:migrate": "bunx --bun drizzle-kit migrate",
+		"db:push": "bunx --bun drizzle-kit push",
+		"db:pull": "bunx --bun drizzle-kit pull",
+		"db:check": "bunx --bun drizzle-kit check",
+		"db:update": "bunx --bun drizzle-kit up",
+		"db:studio": "bunx --bun drizzle-kit studio"
 	},
 	"dependencies": {
 		"@hono/sentry": "^1.2.0",
